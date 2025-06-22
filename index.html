@@ -3,65 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <title>Simulaciones del TFG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    video {
+      display: block;
+      margin: 15px auto 40px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    p {
+      margin: 10px 0 5px 0;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #ddd;
+      margin: 40px 0;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Simulaciones del TFG</h1>
 
-  <h2>Planeta tipo Venus</h2>
-  Son planetas que carecen de campo magnético externo. Este ejemplo sirve para simular computacionalmente un viento solar entrante que revote con la superficie del planeta reflectivamente.
+  <h2>🌑 Planeta tipo Venus</h2>
+  <p>Los planetas tipo Venus carecen de campo magnético externo. Este ejemplo simula cómo el viento solar entrante interactúa con la superficie planetaria, rebotando reflectivamente sobre ella.</p>
   <video width="640" controls>
     <source src="01_densidad_ejeZ.mp4" type="video/mp4">
   </video>
 
-  
-  <h2>Planeta tipo Tierra</h2>
-  Para este tipo de planetas diferenciamos dos casos distintos, uno en el que el campo magnético planetario es estable y otro en el que se está produciendo una inversión de campo.
+  <hr>
 
-  <h3>Campo magnético estable</h3>
-  Hacemos un corte normal al eje Z y representamos la densidad.
+  <h2>🌍 Planeta tipo Tierra</h2>
+  <p>Para planetas con campo magnético, diferenciamos entre un campo estable y una situación de inversión magnética.</p>
+
+  <h3>🧭 Campo magnético estable</h3>
+
+  <p>Corte transversal al eje Z, representación de la densidad:</p>
   <video width="640" controls>
     <source src="02_densidad_ejeZ.mp4" type="video/mp4">
   </video>
 
-  Hacemos una comparación para dos valores de campo magnético del viento estelar distintos. A la izquierda B=(1,0,0) y a la derecha B=(0,1,0).
+  <p>Comparación para dos campos del viento solar distintos:<br>
+  A la izquierda \( \mathbf{B} = (1,0,0) \), a la derecha \( \mathbf{B} = (0,1,0) \):</p>
   <video width="640" controls>
     <source src="02_densidad_ejeZ_comparacion_bx_by.mp4" type="video/mp4">
   </video>
 
-  Ahora expresamos las líneas de campo primero para la velocidad del fluido y luego para el campo magnético.
+  <p>Líneas de campo para la velocidad:</p>
   <video width="640" controls>
     <source src="02_velocidad_lineas.mp4" type="video/mp4">
   </video>
 
+  <p>Líneas de campo para el campo magnético:</p>
   <video width="640" controls>
     <source src="02_magnetico_lineas.mp4" type="video/mp4">
   </video>
 
-  <h3>Proceso de inversión de campo</h3>
-  Hacemos un corte normal al eje Z y representamos la densidad.
+  <hr>
+
+  <h3>🔄 Proceso de inversión de campo</h3>
+
+  <p>Corte transversal al eje Z, representación de la densidad:</p>
   <video width="640" controls>
     <source src="03_densidad_ejeZ.mp4" type="video/mp4">
   </video>
 
-  Hacemos lo mismo para la velocidad.
+  <p>Corte en el eje Z para la velocidad:</p>
   <video width="640" controls>
     <source src="03_velocidad_ejeZ.mp4" type="video/mp4">
   </video>
 
-  Ahora con el corte normal al eje X.
+  <p>Corte en el eje X para la velocidad:</p>
   <video width="640" controls>
-    <source src="03_velocidad_ejeZ.mp4" type="video/mp4">
+    <source src="03_velocidad_ejeX.mp4" type="video/mp4">
   </video>
 
-  Ahora expresamos las líneas de campo primero para la velocidad del fluido y luego para el campo magnético.
+  <p>Líneas de campo para la velocidad:</p>
   <video width="640" controls>
     <source src="03_velocidad_lineas.mp4" type="video/mp4">
   </video>
 
+  <p>Líneas de campo para el campo magnético:</p>
   <video width="640" controls>
     <source src="03_magnetico_lineas.mp4" type="video/mp4">
   </video>
-
 
 </body>
 </html>
