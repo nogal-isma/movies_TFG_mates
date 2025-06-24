@@ -5,16 +5,17 @@
   <title>Simulaciones del TFG</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 40px auto;
-      max-width: 800px;
-      line-height: 1.6;
+      max-width: 900px;
+      line-height: 1.8;
       color: #333;
-      background-color: #f9f9f9;
+      background-color: #f5f7fa;
+      padding: 0 20px;
     }
 
     h1, h2, h3 {
-      color: #2c3e50;
+      color: #1a237e;
     }
 
     h1 {
@@ -24,20 +25,77 @@
 
     video {
       display: block;
-      margin: 15px auto 40px auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+      margin: 15px auto 10px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+    }
+
+    figure {
+      margin: 30px auto 50px auto;
+      text-align: center;
+    }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.95em;
+      color: #444;
+      margin-top: 10px;
     }
 
     p {
-      margin: 10px 0 5px 0;
+      margin: 10px 0;
+      text-align: justify;
     }
 
     hr {
       border: none;
       height: 1px;
-      background-color: #ddd;
+      background-color: #ccc;
       margin: 40px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e3f2fd;
+      color: #0d47a1;
+    }
+
+    td a {
+      background-color: #0d47a1;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    td a:hover {
+      background-color: #1976d2;
+    }
+
+    #animacion1, #animacion2, #animacion3,
+    #animacion4, #animacion5, #animacion6,
+    #animacion7, #animacion8, #animacion9,
+    #animacion10, #animacion11 {
+      font-style: italic;
+      color: #444;
+      margin-top: 5px;
+      margin-bottom: 30px;
+      text-align: center;
     }
   </style>
 
@@ -47,6 +105,7 @@
   </script>
 </head>
 <body>
+
 
   <h1>Simulaciones del TFG</h1>
   <p>En el desarrollo de este trabajo de fin de grado titulado "Estudio de la interacción 
@@ -150,12 +209,14 @@
     es \(B = 5\times 10^-4\G\) con \(\hat{B} = (1,0,0)\) y la velocidad es \(v = 5\times 10^7\, cm/s\)
     con \(\hat{v} = (1,0,0)\).
   </p>
+  <figure id="animacion1">
   <video width="640" controls>
     <source src="01_densidad_ejeZ.mp4" type="video/mp4">
   </video>
-  <p id="animacion1">Animación 1. Corte normal al eje \(Z\) del dominio computacional. El viento se desplaza de izquierda a derecha
+    <figcaption>Animación 1. Corte normal al eje \(Z\) del dominio computacional. El viento se desplaza de izquierda a derecha
      en el vídeo. La frontera radial intera son dos radios planetarios y la frontera externa \(30\,R_{\oplus}\).
-     Vemos cómo se forma una pequeña onda de choque sobre la forntera interna.</p>
+     Vemos cómo se forma una pequeña onda de choque sobre la forntera interna.</figcaption>
+  </figure>
 
   <hr>
 
@@ -182,14 +243,16 @@
     de la Tierra en la actualidad. Como hemos comentado, el 95% del campo corresponde a la contribución dipolar y 
     añadimos un restante cuadrupolar. Los valores del viento solar son los mismos que en caso de Venus.
   </p>
+  <figure id="animacion2">
   <video width="640" controls>
     <source src="02_densidad_ejeZ.mp4" type="video/mp4">
   </video>
-  <p id="animacion2">
+  <figcaption>
     Animación 2. Corte transversal al eje \(Z\) en el que se representa la densidad del fluido. Vemos la formación de una
     magnetopausa a unos 15 radios terrestres, debido a la interacción entre el viento solar y la energía magnética
     planetaria.
-  </p>
+  </figcaption>
+  </figure>
 
   <p>
     Seguidamente, comprobamos la influencia de la orientación del campo magnético interestelar
@@ -197,35 +260,40 @@
     Para ello comparamos la situación anterior con otra simulación la que cambiamos la orientación 
     del campo magnético del viento estelar, donde ahora \( \hat{B} = (0,1,0) \).
   </p>
+  <figure id="animacion3">
   <video width="640" controls>
     <source src="02_densidad_ejeZ_comparacion_bx_by.mp4" type="video/mp4">
   </video>
-  <p id="animacion3">
+  <figcaption>
     Animación 3. Corte transversal al eje \(Z\) en el que se representa la densidad del fluido. A la izquierda, viento con orientación
     \( \hat{B} = (1,0,0) \) y a la derecha \( \hat{B} = (0,1,0) \). Vemos una clara deferencia en el grosor de la
     magnetopausa generada.
-  </p>
+  </figcaption>
+  </figure>
 
   <p>
     Otra forma de representar el resultado de las simulaciones es mediante la líneas de campo tanto del vector velocidad como
     del campo magnético. En estas represetnaciones no vemos no vemos el movimiento del viento, sino cómo éste fluye por el
     dominio computacional.
   </p>
+  <figure id="animacion4">
   <video width="640" controls>
     <source src="02_velocidad_lineas.mp4" type="video/mp4">
   </video>
-  <p id="animacion4">
+  <figcaption>
     Animación 4. Líneas de campo de la velocidad para el caso de un campo principalmente dipolar con un viento solar \( \hat{B} = (1,0,0) \).
-  </p>
+  </figcaption>
+  </figure>
 
-  
+  <figure id="animacion5">
   <video width="640" controls>
     <source src="02_magnetico_lineas.mp4" type="video/mp4">
   </video>
-  <p id="animacion5">
+  <figcaption>
     Animación 5. Líneas de campo del campo magnético planetario para el caso de un campo principalmente dipolar con un viento solar \( \hat{B} = (1,0,0) \).
     Se pueden ver claramente los lóbulos polares y las líneas de campo cerradas características de este tipo de problemas.
-  </p>
+  </figcaption>
+  </figure>
 
   <hr>
 
@@ -237,28 +305,34 @@
     el cuadrupolo y un 35% para el octupolo.
   </p>
 
+  <figure id="animacion6">
   <video width="640" controls>
     <source src="03_densidad_ejeZ.mp4" type="video/mp4">
   </video>
-  <p id="animacion6">
+  <figcaption>
     Animación 6. Corte transversal al eje \(Z\) en el que se representa la densidad del fluido para la situación de inversión. Vemos la formación de una
     magnetopausa muy cercana a la frontera radial interna, debido a la disminución de la intensidad del campo y que las componentes no dipolares
     tiene una influencia más local en el campo.
-  </p>
+  </figcaption>
+  </figure>
 
+  <figure id="animacion7">
   <video width="640" controls>
     <source src="03_velocidad_ejeZ.mp4" type="video/mp4">
   </video>
-  <p id="animacion7">
+  <figcaption>
     Animación 7. Corte transversal al eje \(Z\) en el que se representa la velocidad del fluido para la situación de inversión.
-  </p>
+  </figcaption>
+  </figure>
 
+  <figure id="animacion8">
   <video width="640" controls>
     <source src="03_velocidad_ejeX.mp4" type="video/mp4">
   </video>
-  <p id="animacion8">
+  <figcaption>
     Animación 8. Corte transversal al eje \(X\) en el que se representa la densidad del fluido para la situación de inversión.
-  </p>
+  </figcaption>
+  </figure>
   <p>
     Este corte del dominio representa lo que vería el viento al incidir en el planeta. Se puede apreciar los cuatro lóbulos en los que
     la velocidad aumenta debido a la influencia del cuadrupolo.
@@ -270,36 +344,42 @@
   </p>
 
   <p>De nuevo, presentamos también las líneas de campo para la situación de inversión de campo.</p>
-  
+
+  <figure id="animacion9">
   <video width="640" controls>
     <source src="03_velocidad_lineas.mp4" type="video/mp4">
   </video>
-  <p id="animacion9">
+  <figcaption>
     Animación 9. Líneas de campo de la velocidad para el caso de un campo no dipolar con un viento solar \( \hat{B} = (1,0,0) \). Podemos distinguir
     vórtices cercanos a la forntera radial interna.
-  </p>
+  </figcaption>
+  </figure>
 
+  <figure id="animacion10">
   <video width="640" controls>
     <source src="03_magnetico_lineas.mp4" type="video/mp4">
   </video>
-  <p id="animacion10">
+  <figcaption>
     Animación 10. Líneas de campo del campo magnético para el caso de un campo no dipolar con un viento solar \( \hat{B} = (1,0,0) \). Se pueden aperciar
     los diferentes lóbulos y líneas cerradas del cuadrupolo.
-  </p>
+  </figcaption>
+  </figure>
 
   <hr>
 
   <p>Finalizamos comparando ambas situaciones para caso de planetas tipo Tierra, por un lado el dipolo estable y por otro el campo no dipolar 
     característico de una sitiación de inversión de campo.
   </p>
+  <figure id="animacion11">
   <video width="640" controls>
     <source src="comparacion_velocidades.mp4" type="video/mp4">
   </video>
-  <p id="animacion11">
+  <figcaption>
     Animación 11. Comparación de líneas de campo de la velocidad con un viento solar \( \hat{B} = (1,0,0) \). Las líneas del campo dipolar estable son las azules
     y las del caso de inversión de campo son las amarillas. Vemos una diferencia clara en la influencia de la interacción con el viento solar
     debida a la reducción de intensidad de campo planetario en el segundo caso.
-  </p>
+  </figcaption>
+  </figure>
   
 </body>
 </html>
