@@ -96,13 +96,20 @@
     solar entrante interactúa con la superficie planetaria, rebotando reflectivamente sobre ella. 
     Es la simulación con la condición de frontera interna más sencilla pero nos permite asegurar el
     correcto funcionamiento de la modelización del viento estelar, saliente de la semiesfera negativa
-    (con valores en $X$ negativos) y dejando salir el viento por la semiesfera positiva (con valores
-    positivos en $X$) imponiendo como condición de contorno un gradiente cero.</p>
+    (con valores en \(X\) negativos) y dejando salir el viento por la semiesfera positiva (con valores
+    positivos en \(X\)) imponiendo como condición de contorno un gradiente cero.</p>
+  <p>
+    Los valores caracteristicos los representamos mediante módulo y vector director para la velocidad y
+    el campo magnético. En primero luegar, tenemos una densidad \(\rho = 20\times 10^{-24}\, g/cm^3\) y
+    una temperatura \(T=1.8\times 10^5\,K\). En cuento a las cantidades vectoriales: el campo magnético
+    es \(B = 5\times 10^-4\G\) con \(\hat{B} = (1,0,0)\) y la velocidad es \(v = 5\times 10^7\, cm/s\)
+    con \(\hat{v} = (1,0,0)\).
+  </p>
   <video width="640" controls>
     <source src="01_densidad_ejeZ.mp4" type="video/mp4">
   </video>
-  <p>Corte normal al eje $Z$ del dominio computacional. El viento se desplaza de izquierda a derecha
-     en el vídeo. La frontera radial intera son dos radios planetarios y la frontera externa $30\,R_{\oplus}$.
+  <p>Corte normal al eje \(Z\) del dominio computacional. El viento se desplaza de izquierda a derecha
+     en el vídeo. La frontera radial intera son dos radios planetarios y la frontera externa \(30\,R_{\oplus}\).
      Vemos cómo se forma una pequeña onda de choque sobre la forntera interna.</p>
 
   <hr>
@@ -123,18 +130,36 @@
     y 95% pasan a ser las contribuciones no dipolares (cuadrupolo y octupolo), reduciendose el dipolo al 5%.
   </p>
 
-  <h3>Campo magnético estable</h3>
+  <h3>Campo magnético dipolar estable</h3>
 
-  <p>Corte transversal al eje Z, representación de la densidad:</p>
+  <p>
+    Para el caso de campo magnético planetario estable, imponemos una intensidad \(B = -0.32\, G\), característica
+    de la Tierra en la actualidad. Como hemos comentado, el 95% del campo corresponde a la contribución dipolar y 
+    añadimos un restante cuadrupolar. Los valores del viento solar son los mismos que en caso de Venus.
+  </p>
   <video width="640" controls>
     <source src="02_densidad_ejeZ.mp4" type="video/mp4">
   </video>
+  <p>
+    Corte transversal al eje \(Z\) en el que se representa la densidad del fluido. Vemos la formación de una
+    magnetopausa a unos 15 radios terrestres, debido a la interacción entre el viento solar y la energía magnética
+    planetaria.
+  </p>
 
-  <p>Comparación para dos campos del viento solar distintos:<br>
-  A la izquierda \( \mathbf{B} = (1,0,0) \), a la derecha \( \mathbf{B} = (0,1,0) \):</p>
+  <p>
+    Seguidamente, comprobamos la influencia de la orientación del campo magnético interestelar
+    a la hora de generar magnetoestructuras al interaccionar con un campo magnético planetario.
+    Para ello comparamos la situación anterior con otra simulación la que cambiamos la orientación 
+    del campo magnético del viento estelar, donde ahora \( \hat{B} = (0,1,0) \).
+  </p>
   <video width="640" controls>
     <source src="02_densidad_ejeZ_comparacion_bx_by.mp4" type="video/mp4">
   </video>
+  <p>
+    Corte transversal al eje \(Z\) en el que se representa la densidad del fluido. A la izquierda, viento con orientación
+    \( \hat{B} = (1,0,0) \) y a la derecha \( \hat{B} = (0,1,0) \). Vemos una clara deferencia en el grosor de la
+    magnetopausa generada.
+  </p>
 
   <p>Líneas de campo para la velocidad:</p>
   <video width="640" controls>
