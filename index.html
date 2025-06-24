@@ -92,15 +92,36 @@
 </table>
   
   <h2>Planeta tipo Venus</h2>
-  <p>Los planetas tipo Venus carecen de campo magnético externo. Este ejemplo simula cómo el viento solar entrante interactúa con la superficie planetaria, rebotando reflectivamente sobre ella.</p>
+  <p>Los planetas tipo Venus carecen de campo magnético externo. Este ejemplo simula cómo el viento 
+    solar entrante interactúa con la superficie planetaria, rebotando reflectivamente sobre ella. 
+    Es la simulación con la condición de frontera interna más sencilla pero nos permite asegurar el
+    correcto funcionamiento de la modelización del viento estelar, saliente de la semiesfera negativa
+    (con valores en $X$ negativos) y dejando salir el viento por la semiesfera positiva (con valores
+    positivos en $X$) imponiendo como condición de contorno un gradiente cero.</p>
   <video width="640" controls>
     <source src="01_densidad_ejeZ.mp4" type="video/mp4">
   </video>
+  <p>Corte normal al eje $Z$ del dominio computacional. El viento se desplaza de izquierda a derecha
+     en el vídeo. La frontera radial intera son dos radios planetarios y la frontera externa $30\,R_{\oplus}$.
+     Vemos cómo se forma una pequeña onda de choque sobre la forntera interna.</p>
 
   <hr>
 
   <h2>Planeta tipo Tierra</h2>
-  <p>Para planetas con campo magnético, diferenciamos entre un campo estable y una situación de inversión magnética.</p>
+  <p>Los planetas como la Tierra tienen un núcleo externo activo, que mediante la rotación de metales cargados
+    generan cmapos magnéticos que llegan a manifestarse fuera del planeta, generando lo que conocemos como
+    magnetosfera. Principalemente, la dinámica del campo magnético terrestre está gobernado por la geodinamo.
+    El campo planetario se caracteriza por un potencial multipolar, donde actualmente, en situación de campo
+    magnético estable, la componente dipolar (primera aproximación) tiene una contribución aproximada del 95%,
+    donde el polo norte magnético se encuentra en el hemisferio sur, mientras que el porcentaje está 
+    representado por la componentes de mayor orden.
+    </p>
+  <p>
+    No obstante, a lo largo de la historia de la Tierra, existen evidencias de que el polo norte magnético
+    ha estado también en el hemisferio norte. Este proceso se conoce como inversión magnética y última
+    ocurrió hace menos de 1 millón de años. Durante este proceso, la intensidad del campo magnético disminuye
+    y 95% pasan a ser las contribuciones no dipolares (cuadrupolo y octupolo), reduciendose el dipolo al 5%.
+  </p>
 
   <h3>Campo magnético estable</h3>
 
