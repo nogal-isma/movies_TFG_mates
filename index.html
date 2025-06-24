@@ -11,21 +11,31 @@
       width: 100%;
       background-color: #222;
       color: white;
-      padding: 15px 20px;
+      padding: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.5);
       z-index: 9999;
       font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .left, .right {
+      flex: 1;
+    }
+    
+    .right {
+      text-align: right;
+    }
+    
+    .title {
       text-align: center;
-    }
-
-    .fixed-header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    .fixed-header p {
-      margin: 2px 0;
-      font-size: 1rem;
+      font-size: 1.4rem;
+      font-weight: bold;
     }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,7 +45,7 @@
       color: #333;
       background-color: #f5f7fa;
       padding: 0 20px;
-      padding-top: 110px;
+      padding-top: 140px;
     }
 
     h1, h2, h3 {
@@ -130,12 +140,15 @@
 </head>
 <body>
   <header class="fixed-header">
-    <div>
-      <h1>Ismael Nogal Ayuso</h1>
-      <p>Trabajo Fin de Grado en Matemáticas</p>
-      <p><strong>Estudio de la interacción del viento solar con el entorno terrestre mediante simulación numérica en tres dimensiones</strong></p>
+    <div class="top-bar">
+      <span class="left">Trabajo de Fin de Grado en Matemáticas</span>
+      <span class="right">Ismael Nogal Ayuso</span>
+    </div>
+    <div class="title">
+      Estudio de la interacción del viento solar con el entorno terrestre mediante simulación numérica en tres dimensiones
     </div>
   </header>
+
 
 
   <h1>Simulaciones del TFG</h1>
